@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURDS Javascript</title>
+    <!-- Custom File BootStrap -->
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <!-- Custom File FontAwesome -->
+    <link rel="stylesheet" href="style/all.min.css">
+    <!-- Custom File Css Style -->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <section id="langing">
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+        </div>
+    </section>
+
+    <section class="py-3">
+        <div class="w-75 mx-auto my-3 text-white">
+            <h2 class="text-center mb-3 fw-bold">Curd Options</h2>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="mb-4">
+                        <label for="productName"  class="mb-2">Add_Product__ :
+                            <i class="fas fa-cart-plus"></i>
+                        </label>
+                        <input placeholder="add_Product__" onkeyup="validName()" type="text" class="form-control py-2 px-3" id="productName">
+                        <div class="alert alert-danger d-none">Plase Enter Your Name Product...!</div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-4">
+                        <label for="productPrice"  class="mb-2">Price:__
+                            <i class="fa-solid fa-money-check-dollar"></i>
+                        </label>
+                        <input placeholder="price__" onkeyup="validPrice()" type="text" class="form-control py-2 px-3" id="productPrice">
+                        <div id="price" class="alert alert-danger d-none">Enter Price Product...!</div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-4">
+                        <label for="productCategory"  class="mb-2">Category:___
+                            <i class="fa-solid fa-certificate"></i>
+                        </label>
+                        <select id="productCategory" class="form-select py-2 px-3">
+                            <option class="bg-light fw-bold py-3" value="tv">Tv</option>
+                            <option class="bg-light fw-bold py-3" value="mobile">mobile</option>
+                            <option class="bg-light fw-bold py-3" value="labtop">labtop</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="mb-4">
+                        <label for="productDescription"  class="mb-2">Description:___
+                            <i class="fa-solid fa-prescription-bottle-medical"></i>
+                        </label>
+                        <textarea placeholder="Add_Description:___" id="productDescription" class="form-control mb-3 py-2 px-3"></textarea>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-outline-success mt-2 py-2 me-3 d-inline" id="addBtn">Create_Product</button>
+            <button class="btn btn-outline-info d-none mt-2 py-2 me-3" id="editBtn">Add Edit</button>
+            <button class="btn btn-outline-danger mt-2 py-2" id="clearBtn">Clear Form</button>
+        </div>
+    </section>
+
+    <section class="mt-5 mb-2">
+        <div class="mx-auto w-75">
+            <input type="text" id="inputSearch" class="form-control m-auto w-75 my-4 py-3" 
+            placeholder="Search Product..." >
+        </div>
+    </section>
+
+    <section class="py-2">
+        <div class="mx-auto w-75">
+            <table class="table text-white-50 table-dark table-striped">
+                <thead>
+                    <th>#</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Product Category</th>
+                    <th>Product Description</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="tableBody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Custom File Bootstrap js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- Custom file JavaScript-->
+    <script src="js/main.js"></script>
+</body>
+</html>
